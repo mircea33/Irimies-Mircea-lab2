@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Irimies_Mircea_lab2"
         mc:Ignorable="d"
-            Title="MainWindow" Height="450" Width="800">
+            Title="MainWindow" Height="450" Width="800" Loaded="frmMain_Loaded">
     <Window.Background>
         <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}"/>
     </Window.Background>
@@ -58,21 +58,20 @@
         <Menu x:Name="mnuMain" HorizontalAlignment="Left" Height="21" VerticalAlignment="Top"
 Width="131" Margin="0,26,0,0">
             <MenuItem Header="File">
-                <MenuItem Header="Exit"/>
+                <MenuItem Header="Exit" Click="exitToolStripMenuItem_Click"/>
             </MenuItem>
             <MenuItem Header="_Doughnuts">
                 <MenuItem Header="Make">
                     <MenuItem Header="Raised">
-                        <MenuItem x:Name="glazedToolStripMenuItem" Header="Glazed"  IsCheckable="True" />
-                        <MenuItem x:Name="sugarToolStripMenuItem" Header="Sugar" IsCheckable="True"/>
+                        <MenuItem x:Name="glazedToolStripMenuItem" Header="Glazed"
+Click="glazedToolStripMenuItem_Click" IsCheckable="True"/>
+                        <MenuItem x:Name="sugarToolStripMenuItem" Header="Sugar"
+IsCheckable="True" Click="sugarToolStripMenuItem_Click"/>
                     </MenuItem>
-                    <MenuItem Header="Filled">
-                        <MenuItem x:Name="lemonFilledMenuItem" Header="Lemon"  IsCheckable="True" />
-                        <MenuItem x:Name="chocolateFilledMenuItem" Header="Chocolate" IsCheckable="True" />
-                        <MenuItem x:Name="vanillaFilledMenuItem" Header="Vanilla"  IsCheckable="True" />
-                    </MenuItem>
+                    <MenuItem Header="Filled"/>
                 </MenuItem>
-                <MenuItem x:Name="mnuStop" Header="Stop" />
+                <MenuItem x:Name="mnuStop" Header="Stop"
+Click="stopToolStripMenuItem_Click"/>
             </MenuItem>
         </Menu>
 
